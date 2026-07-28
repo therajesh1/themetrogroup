@@ -235,7 +235,7 @@ function HeroSection() {
                   onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.borderColor = "#D4AF37" }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border-mid)" }}
                 >
-                  Book Consultation
+                  Enquiry
                 </button>
               </Link>
             </motion.div>
@@ -1019,7 +1019,7 @@ function ContactCTA() {
                     onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "#f0d060" }}
                     onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "#D4AF37" }}
                   >
-                    Book a Consultation
+                    Enquiry
                   </button>
                 </Link>
                 <Link to="/properties" style={{ textDecoration: "none" }}>
