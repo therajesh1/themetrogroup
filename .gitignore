@@ -1,0 +1,15 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build output
+dist
+
+# Environment and Logs
+.env
+.env.local
+.DS_Store
+*.log
+
+# Antigravity/Editor internal files
+.antigravity
