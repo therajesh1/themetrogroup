@@ -25,33 +25,6 @@ const services = [
   { icon: "✦", title: "Smart Home Integration", desc: "Seamlessly woven automation technology that elevates comfort, security, and energy efficiency." },
 ]
 
-const testimonials = [
-  {
-    name: "Victoria Harrington",
-    title: "CEO, Harrington Capital",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=faces",
-    text: "Metro Group didn't just deliver a home — they realised a vision I couldn't fully articulate. The precision, the materials, the sheer artistry. I've never experienced anything like it.",
-  },
-  {
-    name: "Alexander Monroe",
-    title: "Founder, Monroe Global",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=faces",
-    text: "From the first consultation to final handover, every step felt effortless and exclusive. They operate at a level entirely above any firm I've worked with before.",
-  },
-  {
-    name: "Isabella Chen",
-    title: "Art Director & Collector",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=faces",
-    text: "The design intelligence behind my Malibu residence is extraordinary. They understood that a home of this calibre must function as both sanctuary and statement.",
-  },
-  {
-    name: "Marcus Laurent",
-    title: "International Architect",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad729515a5a?w=80&h=80&fit=crop&crop=faces",
-    text: "As an architect myself, I hold impossibly high standards. Metro Group exceeded every single one. The detailing is museum-quality. Truly exceptional work.",
-  },
-]
-
 const gallery = [
   { id: "1", image: "/projects/kalyan surabhi.png", label: "Kalyan Surabhi", h: "tall" },
   { id: "2", image: "/projects/Metro majestic.png", label: "Metro Majestic", h: "short" },
@@ -824,68 +797,6 @@ function ShowcaseSection() {
   )
 }
 
-/* ─── TESTIMONIALS ──────────────────────────────────────────── */
-function TestimonialsSection() {
-  const [active, setActive] = useState(0)
-
-  useEffect(() => {
-    const t = setInterval(() => setActive((a) => (a + 1) % testimonials.length), 5000)
-    return () => clearInterval(t)
-  }, [])
-
-  return (
-    <section style={{ padding: "120px 48px" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-        <FadeUp>
-          <div style={{ textAlign: "center", marginBottom: 72 }}>
-            <GoldLine />
-            <h2 style={{ fontSize: "clamp(36px, 4vw, 56px)", fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text-primary)", lineHeight: 1.05 }}>
-              Client Stories
-            </h2>
-          </div>
-        </FadeUp>
-
-        <FadeUp delay={0.1}>
-          <div className="grid-2-col">
-            {testimonials.map((t, i) => (
-              <div
-                key={t.name}
-                onClick={() => setActive(i)}
-                style={{
-                  padding: "40px",
-                  background: i === active ? "rgba(212,175,55,0.07)" : "var(--bg-card)",
-                  border: `1px solid ${i === active ? "rgba(212,175,55,0.3)" : "var(--border-subtle)"}`,
-                  borderRadius: 16,
-                  cursor: "none",
-                  transition: "all 0.5s cubic-bezier(0.22,1,0.36,1)",
-                }}
-              >
-                {/* Stars */}
-                <div style={{ color: "#D4AF37", fontSize: 13, letterSpacing: 4, marginBottom: 20 }}>★★★★★</div>
-                {/* Quote */}
-                <div style={{ fontSize: 48, color: "rgba(212,175,55,0.2)", lineHeight: 0.6, marginBottom: 8, fontFamily: "Georgia, serif" }}>"</div>
-                <p style={{ fontSize: 15, color: "var(--text-secondary)", lineHeight: 1.8, marginBottom: 32 }}>{t.text}</p>
-                {/* Author */}
-                <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-                  <img
-                    src={t.avatar}
-                    alt={t.name}
-                    style={{ width: 48, height: 48, borderRadius: "50%", objectFit: "cover", border: "2px solid rgba(212,175,55,0.3)" }}
-                  />
-                  <div>
-                    <div style={{ fontSize: 14, fontWeight: 700, color: "var(--text-primary)" }}>{t.name}</div>
-                    <div style={{ fontSize: 12, color: "#D4AF37", marginTop: 2, letterSpacing: "0.05em" }}>{t.title}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </FadeUp>
-      </div>
-    </section>
-  )
-}
-
 /* ─── GALLERY ────────────────────────────────────────────────── */
 function GallerySection() {
   return (
@@ -1153,7 +1064,6 @@ export default function Home() {
       <GroupOfCompaniesSection />
       <ServicesSection />
       <ShowcaseSection />
-      <TestimonialsSection />
       <GallerySection />
       <ProcessSection />
       <ContactCTA />
