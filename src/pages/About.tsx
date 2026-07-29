@@ -1,14 +1,5 @@
 import { motion } from "framer-motion"
 
-const awards = [
-  { year: "2024", title: "Architectural Digest — Design Firm of the Year" },
-  { year: "2023", title: "Forbes — Top 10 Luxury Real Estate Brands" },
-  { year: "2022", title: "Dezeen — Best Residential Architecture" },
-  { year: "2021", title: "Wall Street Journal — Premium Lifestyle Award" },
-  { year: "2020", title: "Robb Report — Ultra Luxury Estates Champion" },
-  { year: "2019", title: "Wallpaper* — Best Emerging Design Studio" },
-]
-
 function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   return (
     <motion.div
@@ -44,7 +35,7 @@ export default function About() {
               <span className="gold-text">Living Well</span>
             </h1>
             <p style={{ fontSize: 18, color: "var(--text-secondary)", maxWidth: 520, lineHeight: 1.75, marginTop: 24 }}>
-              Since 2009, Metro Group has been the singular address for clients who expect their residence to be a masterpiece.
+              Metro Group is the singular address for clients who expect their residence to be a masterpiece.
             </p>
           </FadeUp>
         </div>
@@ -63,7 +54,7 @@ export default function About() {
               Metro Group was founded on the principle that a residence of true distinction requires more than skilled architects — it demands a philosophy that treats every material choice, every proportion, every threshold as an opportunity for beauty.
             </p>
             <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.85 }}>
-              Over 15 years we've assembled a team of specialists — architects, interior designers, landscape artists, and investment strategists — unified by a shared intolerance for the mediocre. Our clients are not buying square footage. They are commissioning a legacy.
+              Over the years we've assembled a team of specialists — architects, interior designers, landscape artists, and investment strategists — unified by a shared intolerance for the mediocre. Our clients are not buying square footage. They are commissioning a legacy.
             </p>
           </FadeUp>
           <FadeUp delay={0.15}>
@@ -81,21 +72,6 @@ export default function About() {
                   alt="Metro Group Estate"
                   style={{ width: "100%", height: 500, objectFit: "cover", display: "block" }}
                 />
-              </div>
-              <div style={{
-                position: "absolute",
-                bottom: -32,
-                left: -32,
-                padding: "28px 36px",
-                background: "var(--bg-card)",
-                backdropFilter: "blur(20px)",
-                border: "1px solid var(--border-subtle)",
-                borderRadius: 12,
-                boxShadow: "var(--card-shadow)",
-              }}>
-                <div style={{ fontSize: 11, letterSpacing: "0.35em", color: "#D4AF37", marginBottom: 10, textTransform: "uppercase" }}>✦ Founded</div>
-                <div style={{ fontSize: 40, fontWeight: 800, color: "var(--text-primary)", lineHeight: 1, letterSpacing: "-0.03em" }}>2009</div>
-                <div style={{ fontSize: 12, color: "var(--text-secondary)", marginTop: 6 }}>Beverly Hills, California</div>
               </div>
             </div>
           </FadeUp>
@@ -182,43 +158,6 @@ export default function About() {
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
-          </FadeUp>
-        </div>
-      </section>
-
-      {/* Awards */}
-      <section className="responsive-section" style={{ padding: "120px 48px", background: "var(--bg-surface)" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <FadeUp>
-            <div className="grid-2-col" style={{ alignItems: "start" }}>
-              <div>
-                <GoldLine />
-                <h2 style={{ fontSize: "clamp(36px, 4vw, 52px)", fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text-primary)", lineHeight: 1.06, marginBottom: 24 }}>
-                  Recognised<br />Globally
-                </h2>
-                <p style={{ fontSize: 16, color: "var(--text-secondary)", lineHeight: 1.85 }}>
-                  Our commitment to excellence has been recognised by the world's most prestigious publications, award bodies, and industry authorities.
-                </p>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-                {awards.map((award, i) => (
-                  <FadeUp key={award.title} delay={i * 0.07}>
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: 32,
-                        alignItems: "center",
-                        padding: "24px 0",
-                        borderBottom: "1px solid var(--border-subtle)",
-                      }}
-                    >
-                      <div style={{ fontSize: 13, color: "#D4AF37", fontWeight: 700, letterSpacing: "0.05em", flexShrink: 0, width: 48 }}>{award.year}</div>
-                      <div style={{ fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.5 }}>{award.title}</div>
-                    </div>
-                  </FadeUp>
-                ))}
               </div>
             </div>
           </FadeUp>

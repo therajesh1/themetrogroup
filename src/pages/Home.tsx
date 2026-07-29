@@ -462,6 +462,43 @@ function PropertyCard({ project: p }: { project: Project }) {
             <div style={{ fontSize: 9, color: "var(--text-faint)", letterSpacing: "0.1em", textTransform: "uppercase", marginTop: 2 }}>Details</div>
           </div>
         </div>
+
+        {/* WhatsApp Button */}
+        <a
+          href={`https://wa.me/919867895764?text=${encodeURIComponent(`Hello Metro Group, I am interested in inquiring about ${p.name}.`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 8,
+            width: "100%",
+            marginTop: 16,
+            padding: "12px 16px",
+            background: "rgba(37, 211, 102, 0.12)",
+            border: "1px solid rgba(37, 211, 102, 0.4)",
+            borderRadius: 6,
+            color: "#25D366",
+            fontSize: 12,
+            fontWeight: 700,
+            letterSpacing: "0.08em",
+            textDecoration: "none",
+            textTransform: "uppercase",
+            transition: "all 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            ;(e.currentTarget as HTMLAnchorElement).style.background = "#25D366"
+            ;(e.currentTarget as HTMLAnchorElement).style.color = "#ffffff"
+          }}
+          onMouseLeave={(e) => {
+            ;(e.currentTarget as HTMLAnchorElement).style.background = "rgba(37, 211, 102, 0.12)"
+            ;(e.currentTarget as HTMLAnchorElement).style.color = "#25D366"
+          }}
+        >
+          <span style={{ fontSize: 16 }}>💬</span> WhatsApp Inquiry
+        </a>
       </div>
     </div>
   )

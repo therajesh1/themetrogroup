@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { motion } from "framer-motion"
 
 function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
@@ -23,36 +22,11 @@ function GoldLine() {
   )
 }
 
-const offices = [
-  { city: "Beverly Hills", address: "9200 Wilshire Blvd, Suite 800", phone: "+1 (310) 888 9200", email: "bh@lumiere-estates.com" },
-  { city: "New York", address: "432 Park Avenue, 58th Floor", phone: "+1 (212) 888 4320", email: "ny@lumiere-estates.com" },
-  { city: "Miami", address: "1111 Brickell Bay Drive, Ste 3200", phone: "+1 (305) 888 1111", email: "mia@lumiere-estates.com" },
-]
-
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", interest: "", message: "" })
-  const [submitted, setSubmitted] = useState(false)
-  const [focused, setFocused] = useState<string | null>(null)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubmitted(true)
-  }
-
-  const inputStyle = (field: string) => ({
-    width: "100%",
-    padding: "16px 20px",
-    background: "var(--input-bg)",
-    border: `1px solid ${focused === field ? "rgba(212,175,55,0.5)" : "var(--input-border)"}`,
-    borderRadius: 4,
-    color: "var(--text-primary)",
-    fontSize: 14,
-    fontFamily: "Inter",
-    outline: "none",
-    transition: "border-color 0.3s",
-    resize: "none" as const,
-    boxSizing: "border-box" as const,
-  })
+  const phone = "9867895764"
+  const formattedPhone = "+91 9867895764"
+  const address = "Office no A-629, Lodha Supremus II, Road No. 22, Wagle Estate, Thane"
+  const whatsappUrl = `https://wa.me/919867895764?text=${encodeURIComponent("Hello Metro Group, I would like to inquire about your projects.")}`
 
   return (
     <div style={{ paddingTop: 80 }}>
@@ -67,196 +41,157 @@ export default function Contact() {
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}>
             <GoldLine />
             <h1 style={{ fontSize: "clamp(48px, 6vw, 80px)", fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.04, color: "var(--text-primary)", marginBottom: 20 }}>
-              Begin Your<br />
-              <span className="gold-text">Consultation</span>
+              Get in Touch with<br />
+              <span className="gold-text">Metro Group</span>
             </h1>
-            <p style={{ fontSize: 17, color: "var(--text-secondary)", maxWidth: 500, lineHeight: 1.75 }}>
-              Our team is available exclusively by private appointment. Share your vision and we'll respond within 24 hours.
+            <p style={{ fontSize: 17, color: "var(--text-secondary)", maxWidth: 540, lineHeight: 1.75 }}>
+              Reach out to our corporate office for site visits, project inquiries, or commercial space bookings.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Main content */}
+      {/* Contact Cards Section */}
       <section className="responsive-section" style={{ padding: "80px 48px 120px" }}>
-        <div className="grid-2-col" style={{ maxWidth: 1280, margin: "0 auto", alignItems: "start" }}>
-          {/* Form */}
-          <FadeUp>
-            <div
-              style={{
-                background: "var(--bg-card)",
-                backdropFilter: "blur(24px)",
-                border: "1px solid var(--border-subtle)",
-                borderRadius: 20,
-                padding: "clamp(24px, 5vw, 56px)",
-              }}
-            >
-              {submitted ? (
-                <div style={{ textAlign: "center", padding: "40px 0" }}>
-                  <div className="gold-text" style={{ fontSize: 56, marginBottom: 24 }}>✦</div>
-                  <h3 style={{ fontSize: 28, fontWeight: 700, color: "var(--text-primary)", marginBottom: 16 }}>Thank You</h3>
-                  <p style={{ fontSize: 15, color: "var(--text-secondary)", lineHeight: 1.75 }}>
-                    Your consultation request has been received. A member of our team will contact you privately within 24 hours.
-                  </p>
+        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+          <div className="grid-2-col" style={{ gap: 32 }}>
+            {/* Office Address Card */}
+            <FadeUp>
+              <div
+                style={{
+                  height: "100%",
+                  background: "var(--bg-card)",
+                  backdropFilter: "blur(24px)",
+                  border: "1px solid var(--border-mid)",
+                  borderRadius: 20,
+                  padding: "48px 40px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  boxShadow: "var(--card-shadow)",
+                }}
+              >
+                <div>
+                  <div style={{ fontSize: 11, letterSpacing: "0.35em", color: "#D4AF37", fontWeight: 700, textTransform: "uppercase", marginBottom: 16 }}>
+                    Corporate Office Address
+                  </div>
+                  <h3 style={{ fontSize: 24, fontWeight: 800, color: "var(--text-primary)", marginBottom: 20, lineHeight: 1.3 }}>
+                    Metro Group Head Office
+                  </h3>
+                  <div style={{ fontSize: 16, color: "var(--text-secondary)", lineHeight: 1.8, marginBottom: 32, display: "flex", alignItems: "flex-start", gap: 12 }}>
+                    <span style={{ fontSize: 20, flexShrink: 0 }}>📍</span>
+                    <span>{address}</span>
+                  </div>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit}>
-                  <h3 style={{ fontSize: 22, fontWeight: 700, color: "var(--text-primary)", marginBottom: 8, letterSpacing: "-0.01em" }}>Private Consultation Request</h3>
-                  <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 40, lineHeight: 1.6 }}>All information is held in strict confidence.</p>
 
-                  <div className="grid-2-col" style={{ gap: 16, marginBottom: 16 }}>
-                    <div>
-                      <label style={{ display: "block", fontSize: 11, letterSpacing: "0.2em", color: "#D4AF37", marginBottom: 8, textTransform: "uppercase" }}>Full Name</label>
-                      <input
-                        type="text"
-                        required
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        onFocus={() => setFocused("name")}
-                        onBlur={() => setFocused(null)}
-                        style={inputStyle("name")}
-                        placeholder="Your full name"
-                      />
-                    </div>
-                    <div>
-                      <label style={{ display: "block", fontSize: 11, letterSpacing: "0.2em", color: "#D4AF37", marginBottom: 8, textTransform: "uppercase" }}>Phone</label>
-                      <input
-                        type="tel"
-                        value={form.phone}
-                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        onFocus={() => setFocused("phone")}
-                        onBlur={() => setFocused(null)}
-                        style={inputStyle("phone")}
-                        placeholder="+1 (000) 000 0000"
-                      />
-                    </div>
+                <div style={{ paddingTop: 24, borderTop: "1px solid var(--border-subtle)" }}>
+                  <div style={{ fontSize: 12, color: "var(--text-muted)", letterSpacing: "0.05em" }}>
+                    Visiting Hours: Mon - Sat: 10:00 AM - 7:00 PM
                   </div>
+                </div>
+              </div>
+            </FadeUp>
 
-                  <div style={{ marginBottom: 16 }}>
-                    <label style={{ display: "block", fontSize: 11, letterSpacing: "0.2em", color: "#D4AF37", marginBottom: 8, textTransform: "uppercase" }}>Email Address</label>
-                    <input
-                      type="email"
-                      required
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      onFocus={() => setFocused("email")}
-                      onBlur={() => setFocused(null)}
-                      style={inputStyle("email")}
-                      placeholder="your@email.com"
-                    />
+            {/* Direct Contact Card */}
+            <FadeUp delay={0.15}>
+              <div
+                style={{
+                  height: "100%",
+                  background: "var(--bg-card)",
+                  backdropFilter: "blur(24px)",
+                  border: "1px solid rgba(212,175,55,0.3)",
+                  borderRadius: 20,
+                  padding: "48px 40px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  boxShadow: "var(--card-shadow)",
+                }}
+              >
+                <div>
+                  <div style={{ fontSize: 11, letterSpacing: "0.35em", color: "#D4AF37", fontWeight: 700, textTransform: "uppercase", marginBottom: 16 }}>
+                    Direct Support & Inquiry
                   </div>
+                  <h3 style={{ fontSize: 24, fontWeight: 800, color: "var(--text-primary)", marginBottom: 20 }}>
+                    Call or WhatsApp Us
+                  </h3>
 
-                  <div style={{ marginBottom: 16 }}>
-                    <label style={{ display: "block", fontSize: 11, letterSpacing: "0.2em", color: "#D4AF37", marginBottom: 8, textTransform: "uppercase" }}>Primary Interest</label>
-                    <select
-                      value={form.interest}
-                      onChange={(e) => setForm({ ...form, interest: e.target.value })}
-                      onFocus={() => setFocused("interest")}
-                      onBlur={() => setFocused(null)}
-                      style={{ ...inputStyle("interest"), appearance: "none" as const }}
+                  <div style={{ marginBottom: 32 }}>
+                    <div style={{ fontSize: 12, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>
+                      Phone Line
+                    </div>
+                    <a
+                      href={`tel:${phone}`}
+                      style={{
+                        fontSize: 28,
+                        fontWeight: 800,
+                        color: "#D4AF37",
+                        textDecoration: "none",
+                        letterSpacing: "0.02em",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 10,
+                      }}
                     >
-                      <option value="" style={{ background: "var(--bg-card)" }}>Select a service...</option>
-                      <option value="purchase" style={{ background: "var(--bg-card)" }}>Property Purchase</option>
-                      <option value="architecture" style={{ background: "var(--bg-card)" }}>Luxury Architecture</option>
-                      <option value="investment" style={{ background: "var(--bg-card)" }}>Investment Consulting</option>
-                      <option value="interior" style={{ background: "var(--bg-card)" }}>Interior Design</option>
-                      <option value="management" style={{ background: "var(--bg-card)" }}>Property Management</option>
-                    </select>
+                      <span>📞</span> {formattedPhone}
+                    </a>
                   </div>
+                </div>
 
-                  <div style={{ marginBottom: 40 }}>
-                    <label style={{ display: "block", fontSize: 11, letterSpacing: "0.2em", color: "#D4AF37", marginBottom: 8, textTransform: "uppercase" }}>Your Vision</label>
-                    <textarea
-                      rows={5}
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      onFocus={() => setFocused("message")}
-                      onBlur={() => setFocused(null)}
-                      style={inputStyle("message")}
-                      placeholder="Describe your ideal property or project..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
+                <div style={{ display: "flex", flexDirection: "column", gap: 14, paddingTop: 24, borderTop: "1px solid var(--border-subtle)" }}>
+                  {/* WhatsApp Direct Button */}
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
-                      width: "100%",
-                      padding: "18px",
-                      background: "#D4AF37",
-                      border: "none",
-                      color: "#070707",
-                      fontSize: 12,
-                      letterSpacing: "0.25em",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 10,
+                      padding: "16px 28px",
+                      background: "#25D366",
+                      color: "#ffffff",
+                      fontSize: 13,
+                      letterSpacing: "0.15em",
                       fontWeight: 700,
-                      cursor: "none",
-                      borderRadius: 4,
+                      textDecoration: "none",
+                      borderRadius: 8,
                       textTransform: "uppercase",
-                      fontFamily: "Inter",
-                      transition: "background 0.3s",
+                      transition: "all 0.3s ease",
+                      boxShadow: "0 8px 24px rgba(37, 211, 102, 0.25)",
                     }}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "#f0d060" }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "#D4AF37" }}
                   >
-                    Submit Consultation Request
-                  </button>
-                </form>
-              )}
-            </div>
-          </FadeUp>
+                    <span style={{ fontSize: 18 }}>💬</span> Chat on WhatsApp
+                  </a>
 
-          {/* Sidebar */}
-          <FadeUp delay={0.15}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-              {/* Image */}
-              <div style={{ borderRadius: 16, overflow: "hidden", height: 260, background: "var(--bg-surface)" }}>
-                <img
-                  src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=600&h=400&fit=crop&auto=format"
-                  alt="Our office"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              </div>
-
-              {/* Offices */}
-              {offices.map((o) => (
-                <div
-                  key={o.city}
-                  style={{
-                    padding: "28px 32px",
-                    background: "var(--bg-card)",
-                    border: "1px solid var(--border-subtle)",
-                    borderRadius: 12,
-                  }}
-                >
-                  <div style={{ fontSize: 11, letterSpacing: "0.35em", color: "#D4AF37", fontWeight: 600, textTransform: "uppercase", marginBottom: 12 }}>
-                    {o.city}
-                  </div>
-                  <div style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7 }}>{o.address}</div>
-                  <div style={{ marginTop: 12, display: "flex", flexDirection: "column", gap: 4 }}>
-                    <a href={`tel:${o.phone}`} style={{ fontSize: 13, color: "var(--text-primary)", textDecoration: "none", letterSpacing: "0.02em" }}>{o.phone}</a>
-                    <a href={`mailto:${o.email}`} style={{ fontSize: 12, color: "rgba(212,175,55,0.7)", textDecoration: "none" }}>{o.email}</a>
-                  </div>
+                  {/* Call Direct Button */}
+                  <a
+                    href={`tel:${phone}`}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 10,
+                      padding: "16px 28px",
+                      background: "transparent",
+                      border: "1px solid #D4AF37",
+                      color: "#D4AF37",
+                      fontSize: 13,
+                      letterSpacing: "0.15em",
+                      fontWeight: 700,
+                      textDecoration: "none",
+                      borderRadius: 8,
+                      textTransform: "uppercase",
+                      transition: "all 0.3s ease",
+                    }}
+                  >
+                    <span>📞</span> Call Now
+                  </a>
                 </div>
-              ))}
-
-              {/* Hours */}
-              <div style={{
-                padding: "28px 32px",
-                background: "rgba(212,175,55,0.05)",
-                border: "1px solid rgba(212,175,55,0.15)",
-                borderRadius: 12,
-              }}>
-                <div style={{ fontSize: 11, letterSpacing: "0.35em", color: "#D4AF37", fontWeight: 600, textTransform: "uppercase", marginBottom: 14 }}>
-                  Private Hours
-                </div>
-                {[["Monday — Friday", "9:00 AM – 7:00 PM"], ["Saturday", "By Appointment"], ["Sunday", "Closed"]].map(([d, h]) => (
-                  <div key={d} style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderBottom: "1px solid var(--border-subtle)" }}>
-                    <span style={{ fontSize: 13, color: "var(--text-secondary)" }}>{d}</span>
-                    <span style={{ fontSize: 13, color: "var(--text-primary)" }}>{h}</span>
-                  </div>
-                ))}
               </div>
-            </div>
-          </FadeUp>
+            </FadeUp>
+          </div>
         </div>
       </section>
     </div>
