@@ -40,7 +40,7 @@ const process = [
   { num: "01", title: "Discover", desc: "We immerse ourselves in your vision, lifestyle, and investment goals through private consultations." },
   { num: "02", title: "Design", desc: "Our studio creates detailed architectural concepts that translate aspiration into spatial reality." },
   { num: "03", title: "Build", desc: "Master craftsmen execute every specification with obsessive attention to materials and precision." },
-  { num: "04", title: "Deliver", desc: "A seamless handover experience — your extraordinary residence, perfected beyond expectation." },
+  { num: "04", title: "Deliver", desc: "A seamless handover experience — your extraordinary space, perfected beyond expectation." },
 ]
 
 /* ─── FADE-IN WRAPPER ────────────────────────────────────────── */
@@ -185,7 +185,7 @@ function HeroSection() {
               transition={{ duration: 0.9, delay: 0.9 }}
               style={{ fontSize: 17, color: "var(--text-secondary)", lineHeight: 1.75, maxWidth: 560, marginBottom: 48 }}
             >
-              Luxury residences designed for visionaries who value timeless architecture, premium comfort, and exceptional investment opportunities.
+              Luxury spaces designed for visionaries who value timeless architecture, premium comfort, and exceptional investment opportunities.
             </motion.p>
 
             <motion.div
@@ -549,7 +549,7 @@ function AboutSection() {
             <span className="gold-text">Artistry</span>
           </h2>
           <p style={{ fontSize: 16, color: "var(--text-secondary)", lineHeight: 1.85, marginBottom: 48, maxWidth: 460 }}>
-            Since 2009, Metro Group has been synonymous with a singular idea: that a residence should be more than shelter — it should be a living work of art that inspires and endures.
+            Since 2009, Metro Group has been synonymous with a singular idea: that a space should be more than shelter — it should be a living work of art that inspires and endures.
           </p>
           <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.85, marginBottom: 56, maxWidth: 460 }}>
             We partner exclusively with the world's foremost architects, designers, and craftspeople — selecting only those whose obsession with perfection matches our own.
@@ -1031,7 +1031,7 @@ function ContactCTA() {
                 ✦ Begin Your Journey ✦
               </div>
               <h2 style={{ fontSize: "clamp(36px, 5vw, 72px)", fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text-primary)", lineHeight: 1.05, marginBottom: 24 }}>
-                Your Extraordinary<br />Residence Awaits
+                Your Extraordinary<br />Space Awaits
               </h2>
               <p style={{ fontSize: 17, color: "var(--text-secondary)", maxWidth: 520, margin: "0 auto 48px", lineHeight: 1.75 }}>
                 Schedule a private consultation with our expert team and take the first step toward owning something truly remarkable.

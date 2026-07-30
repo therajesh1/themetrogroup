@@ -35,7 +35,7 @@ export default function About() {
               <span className="gold-text">Living Well</span>
             </h1>
             <p style={{ fontSize: 18, color: "var(--text-secondary)", maxWidth: 520, lineHeight: 1.75, marginTop: 24 }}>
-              Metro Group is the singular address for clients who expect their residence to be a masterpiece.
+              Metro Group is the singular address for clients who expect their space to be a masterpiece.
             </p>
           </FadeUp>
         </div>
@@ -51,7 +51,7 @@ export default function About() {
               <span className="gold-text">Only Standard</span>
             </h2>
             <p style={{ fontSize: 16, color: "var(--text-secondary)", lineHeight: 1.85, marginBottom: 24 }}>
-              Metro Group was founded on the principle that a residence of true distinction requires more than skilled architects — it demands a philosophy that treats every material choice, every proportion, every threshold as an opportunity for beauty.
+              Metro Group was founded on the principle that a space of true distinction requires more than skilled architects — it demands a philosophy that treats every material choice, every proportion, every threshold as an opportunity for beauty.
             </p>
             <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.85 }}>
               Over the years we've assembled a team of specialists — architects, interior designers, landscape artists, and investment strategists — unified by a shared intolerance for the mediocre. Our clients are not buying square footage. They are commissioning a legacy.
