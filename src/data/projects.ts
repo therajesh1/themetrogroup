@@ -220,4 +220,16 @@ export const projectsData: Project[] = [
     units: "Under Construction",
     configurations: "Upcoming",
   },
+  {
+    id: "metro-millenia",
+    name: "Metro Millenia",
+    status: "Ongoing",
+    category: "Residential",
+    location: "Thane, Maharashtra",
+    type: "Residential",
+    image: "/projects/metro millenia.png",
+    desc: "A futuristic residential landmark in Thane, designed to offer smart luxury living spaces and unparalleled comfort.",
+    units: "Under Construction",
+    configurations: "Upcoming",
+  },
 ]
