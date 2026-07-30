@@ -172,4 +172,16 @@ export const projectsData: Project[] = [
     units: "3 BHK & Penthouses",
     configurations: "Under Construction",
   },
+  {
+    id: "seasons-metro",
+    name: "Seasons Metro",
+    status: "Ongoing",
+    category: "Residential + Commercial",
+    location: "Thane, Maharashtra",
+    type: "Residential + Commercial",
+    image: "/projects/seasons metro.png",
+    desc: "A premier upcoming development in Thane offering modern architectural design and vibrant lifestyle amenities.",
+    units: "Under Construction",
+    configurations: "Upcoming",
+  },
 ]

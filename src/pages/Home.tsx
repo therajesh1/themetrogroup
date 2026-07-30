@@ -30,10 +30,11 @@ const gallery = [
   { id: "2", image: "/projects/Metro majestic.png", label: "Metro Majestic", h: "short" },
   { id: "3", image: "/projects/kalyan square.png", label: "Kalyan Square", h: "short" },
   { id: "4", image: "/projects/SURAJ Premises.png", label: "Suraj Premises", h: "tall" },
-  { id: "5", image: "/projects/kalyan nagari.png", label: "Kalyan Nagari", h: "short" },
-  { id: "6", image: "/projects/metro luxuria.png", label: "Metro Luxuria", h: "short" },
-  { id: "7", image: "/projects/Navere Plaza.png", label: "Navare Plaza", h: "tall" },
-  { id: "8", image: "/projects/kalyan aashiyana.png", label: "Kalyan Aashiyana", h: "short" },
+  { id: "5", image: "/projects/seasons metro.png", label: "Seasons Metro", h: "tall" },
+  { id: "6", image: "/projects/kalyan nagari.png", label: "Kalyan Nagari", h: "short" },
+  { id: "7", image: "/projects/metro luxuria.png", label: "Metro Luxuria", h: "short" },
+  { id: "8", image: "/projects/Navere Plaza.png", label: "Navare Plaza", h: "tall" },
+  { id: "9", image: "/projects/kalyan aashiyana.png", label: "Kalyan Aashiyana", h: "short" },
 ]
 
 const process = [
