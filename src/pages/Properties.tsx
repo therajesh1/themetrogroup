@@ -207,14 +207,14 @@ export default function Properties() {
                     flexDirection: "column",
                     borderRadius: 16,
                     overflow: "hidden",
-                    background: "var(--bg-card)",
-                    border: hoveredId === p.id ? "1px solid rgba(212,175,55,0.4)" : "1px solid var(--border-subtle)",
+                    background: "#ffffff",
+                    border: hoveredId === p.id ? "1px solid rgba(212,175,55,0.4)" : "1px solid rgba(0, 0, 0, 0.08)",
                     cursor: "pointer",
                     transition: "transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s, border-color 0.4s",
                     transform: hoveredId === p.id ? "translateY(-8px)" : "none",
                     boxShadow:
                       hoveredId === p.id
-                        ? "0 28px 70px rgba(0,0,0,0.35), 0 0 0 1px rgba(212,175,55,0.2)"
+                        ? "0 28px 70px rgba(0,0,0,0.15), 0 0 0 1px rgba(212,175,55,0.2)"
                         : "var(--card-shadow)",
                   }}
                 >
@@ -224,12 +224,12 @@ export default function Properties() {
                       position: "relative",
                       overflow: "hidden",
                       height: 280,
-                      background: "#08080a",
+                      background: "#ffffff",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       padding: 12,
-                      borderBottom: "1px solid var(--border-subtle)",
+                      borderBottom: "1px solid rgba(0, 0, 0, 0.08)",
                     }}
                   >
                     <img
@@ -262,7 +262,7 @@ export default function Properties() {
                         color: p.status === "Completed" ? "#4ADE80" : "#FBBF24",
                         fontWeight: 700,
                         textTransform: "uppercase",
-                        boxShadow: "0 2px 8px rgba(0,0,0,0.4)",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
                       }}
                     >
                       ● {p.status}
@@ -272,11 +272,11 @@ export default function Properties() {
                   {/* Body Content - Uniform flex layout for equal card size */}
                   <div style={{ padding: "24px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                     <div>
-                      <div style={{ fontSize: 20, fontWeight: 800, color: "var(--text-primary)", letterSpacing: "-0.01em", marginBottom: 10 }}>
+                      <div style={{ fontSize: 20, fontWeight: 800, color: "#070707", letterSpacing: "-0.01em", marginBottom: 10 }}>
                         {p.name}
                       </div>
 
-                      <div style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 16, display: "flex", alignItems: "flex-start", gap: 6, lineHeight: 1.5 }}>
+                      <div style={{ fontSize: 12, color: "#555555", marginBottom: 16, display: "flex", alignItems: "flex-start", gap: 6, lineHeight: 1.5 }}>
                         <span style={{ flexShrink: 0, marginTop: 1 }}>📍</span> <span>{p.location}</span>
                       </div>
                     </div>
