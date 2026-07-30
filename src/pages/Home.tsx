@@ -277,7 +277,7 @@ function StatsBar() {
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <FadeUp>
           <div
-            className="grid-4-col"
+            className="grid-3-col"
             style={{
               background: "var(--border-subtle)",
               border: "1px solid var(--border-subtle)",
@@ -291,7 +291,7 @@ function StatsBar() {
                 style={{
                   padding: "40px 32px",
                   background: "var(--bg-card)",
-                  borderRight: i < 3 ? "1px solid var(--border-subtle)" : "none",
+                  borderRight: i < stats.length - 1 ? "1px solid var(--border-subtle)" : "none",
                   textAlign: "center",
                   transition: "background 0.3s",
                 }}
