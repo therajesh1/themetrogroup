@@ -432,35 +432,11 @@ function PropertyCard({ project: p }: { project: Project }) {
       {/* Info Content - Uniform Flex height */}
       <div style={{ padding: "24px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
         <div>
-          <div style={{ fontSize: 20, fontWeight: 800, color: "var(--text-primary)", letterSpacing: "-0.01em", marginBottom: 10, minHeight: 28 }}>
+          <div style={{ fontSize: 20, fontWeight: 800, color: "var(--text-primary)", letterSpacing: "-0.01em", marginBottom: 10 }}>
             {p.name}
           </div>
-          <div style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 12, display: "flex", alignItems: "flex-start", gap: 6, lineHeight: 1.5, minHeight: 36 }}>
+          <div style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 16, display: "flex", alignItems: "flex-start", gap: 6, lineHeight: 1.5 }}>
             <span style={{ flexShrink: 0, marginTop: 1 }}>📍</span> <span>{p.location}</span>
-          </div>
-          <p style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.65, marginBottom: 20, minHeight: 44 }}>
-            {p.desc}
-          </p>
-        </div>
-
-        {/* Specs Footer */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            paddingTop: 14,
-            borderTop: "1px solid var(--border-subtle)",
-            marginTop: "auto",
-          }}
-        >
-          <div>
-            <div style={{ fontSize: 12, fontWeight: 700, color: "var(--text-primary)" }}>{p.type}</div>
-            <div style={{ fontSize: 9, color: "var(--text-faint)", letterSpacing: "0.1em", textTransform: "uppercase", marginTop: 2 }}>Type</div>
-          </div>
-          <div style={{ textAlign: "right" }}>
-            <div style={{ fontSize: 12, fontWeight: 700, color: "#D4AF37" }}>{p.units || p.configurations}</div>
-            <div style={{ fontSize: 9, color: "var(--text-faint)", letterSpacing: "0.1em", textTransform: "uppercase", marginTop: 2 }}>Details</div>
           </div>
         </div>
 
@@ -476,7 +452,7 @@ function PropertyCard({ project: p }: { project: Project }) {
             justifyContent: "center",
             gap: 8,
             width: "100%",
-            marginTop: 16,
+            marginTop: "auto",
             padding: "12px 16px",
             background: "rgba(37, 211, 102, 0.12)",
             border: "1px solid rgba(37, 211, 102, 0.4)",
