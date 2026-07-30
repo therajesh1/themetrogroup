@@ -208,4 +208,16 @@ export const projectsData: Project[] = [
     units: "Under Construction",
     configurations: "Upcoming",
   },
+  {
+    id: "kalyan-vatika",
+    name: "Kalyan Vatika",
+    status: "Ongoing",
+    category: "Residential",
+    location: "Kalyan, Maharashtra",
+    type: "Residential",
+    image: "/projects/kalyan vatika.png",
+    desc: "A beautifully planned residential enclave in Kalyan, offering serene surroundings and modern lifestyle facilities.",
+    units: "Under Construction",
+    configurations: "Upcoming",
+  },
 ]
