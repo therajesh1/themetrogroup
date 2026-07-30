@@ -2,8 +2,7 @@ import { Link } from "react-router-dom"
 
 const nav = [
   { group: "Explore", items: [{ label: "Properties", href: "/properties" }, { label: "About Us", href: "/about" }, { label: "Services", href: "/#services" }] },
-  { group: "Company", items: [{ label: "Contact", href: "/contact" }, { label: "Careers", href: "#" }, { label: "Press", href: "#" }] },
-  { group: "Legal", items: [{ label: "Privacy Policy", href: "#" }, { label: "Terms of Use", href: "#" }, { label: "Cookie Policy", href: "#" }] },
+  { group: "Company", items: [{ label: "Contact", href: "/contact" }] },
 ]
 
 export default function Footer() {
@@ -18,7 +17,7 @@ export default function Footer() {
     >
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         {/* Top row */}
-        <div className="grid-4-col" style={{ marginBottom: 48 }}>
+        <div className="grid-3-col" style={{ marginBottom: 48 }}>
           {/* Brand */}
           <div>
             <Link to="/" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
