@@ -141,7 +141,7 @@ export default function About() {
                     Embarking on his entrepreneurial journey in 1995, Mahesh Gala has successfully built a dynamic business empire as Managing Director and Chairman. With ventures spanning Apparel, Furniture, Real Estate, Jewellery, and Education, he has established himself as a versatile leader with a keen eye for opportunity and strategic growth.
                   </p>
                   <p style={{ fontSize: 16, color: "var(--text-secondary)", lineHeight: 1.85 }}>
-                    Known for creating unique shopping experiences, developing luxury and affordable living spaces, and promoting quality education, he continues to drive innovation and excellence across industries. Passionate about building sustainable businesses and fostering long-term value, Mahesh Gala remains committed to inspiring growth and leaving a lasting legacy.
+                    Known for creating unique  experiences, developing luxury and affordable living spaces, and promoting quality education, he continues to drive innovation and excellence across industries. Passionate about building sustainable businesses and fostering long-term value, Mahesh Gala remains committed to inspiring growth and leaving a lasting legacy.
                   </p>
                 </div>
 

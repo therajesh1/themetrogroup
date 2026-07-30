@@ -10,16 +10,15 @@ const featuredProjects = projectsData.slice(0, 6)
 
 
 const stats = [
-  { value: "200+", label: "Luxury Villas" },
+  { value: "1 Million+", label: "Square Feet" },
   { value: "15+", label: "Years of Excellence" },
-  { value: "600+", label: "Happy Clients" },
-  { value: "50+", label: "Global Awards" },
+  { value: "2500+", label: "Happy Clients" },
 ]
 
 const services = [
   { icon: "◈", title: "Luxury Architecture", desc: "Bespoke residential design that fuses visionary aesthetics with enduring structural mastery." },
   { icon: "◉", title: "Interior Design", desc: "Curated living environments crafted around your personality, lifestyle, and artistic sensibility." },
-  { icon: "◇", title: "Villa Construction", desc: "End-to-end build management using only the finest craftsmen, materials, and precision engineering." },
+  { icon: "◇", title: "Construction", desc: "End-to-end build management using only the finest craftsmen, materials, and precision engineering." },
   { icon: "◆", title: "Investment Consulting", desc: "Strategic portfolio guidance with market intelligence to maximise your luxury real estate returns." },
   { icon: "○", title: "Property Management", desc: "White-glove concierge services that protect and enhance your asset value around the clock." },
   { icon: "✦", title: "Smart Home Integration", desc: "Seamlessly woven automation technology that elevates comfort, security, and energy efficiency." },
@@ -441,41 +440,43 @@ function PropertyCard({ project: p }: { project: Project }) {
         </div>
 
         {/* WhatsApp Button */}
-        <a
-          href={`https://wa.me/919867895764?text=${encodeURIComponent(`Hello Metro Group, I am interested in inquiring about ${p.name}.`)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={(e) => e.stopPropagation()}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: 8,
-            width: "100%",
-            marginTop: "auto",
-            padding: "12px 16px",
-            background: "rgba(37, 211, 102, 0.12)",
-            border: "1px solid rgba(37, 211, 102, 0.4)",
-            borderRadius: 6,
-            color: "#25D366",
-            fontSize: 12,
-            fontWeight: 700,
-            letterSpacing: "0.08em",
-            textDecoration: "none",
-            textTransform: "uppercase",
-            transition: "all 0.3s ease",
-          }}
-          onMouseEnter={(e) => {
-            ;(e.currentTarget as HTMLAnchorElement).style.background = "#25D366"
-            ;(e.currentTarget as HTMLAnchorElement).style.color = "#ffffff"
-          }}
-          onMouseLeave={(e) => {
-            ;(e.currentTarget as HTMLAnchorElement).style.background = "rgba(37, 211, 102, 0.12)"
-            ;(e.currentTarget as HTMLAnchorElement).style.color = "#25D366"
-          }}
-        >
-          <span style={{ fontSize: 16 }}>💬</span> WhatsApp Inquiry
-        </a>
+        {p.status !== "Completed" && (
+          <a
+            href={`https://wa.me/919867895764?text=${encodeURIComponent(`Hello Metro Group, I am interested in inquiring about ${p.name}.`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 8,
+              width: "100%",
+              marginTop: "auto",
+              padding: "12px 16px",
+              background: "rgba(37, 211, 102, 0.12)",
+              border: "1px solid rgba(37, 211, 102, 0.4)",
+              borderRadius: 6,
+              color: "#25D366",
+              fontSize: 12,
+              fontWeight: 700,
+              letterSpacing: "0.08em",
+              textDecoration: "none",
+              textTransform: "uppercase",
+              transition: "all 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              ;(e.currentTarget as HTMLAnchorElement).style.background = "#25D366"
+              ;(e.currentTarget as HTMLAnchorElement).style.color = "#ffffff"
+            }}
+            onMouseLeave={(e) => {
+              ;(e.currentTarget as HTMLAnchorElement).style.background = "rgba(37, 211, 102, 0.12)"
+              ;(e.currentTarget as HTMLAnchorElement).style.color = "#25D366"
+            }}
+          >
+            <span style={{ fontSize: 16 }}>💬</span> WhatsApp Inquiry
+          </a>
+        )}
       </div>
     </div>
   )
@@ -529,7 +530,7 @@ function AboutSection() {
             Since 2009, Metro Group has been synonymous with a singular idea: that a space should be more than shelter — it should be a living work of art that inspires and endures.
           </p>
           <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.85, marginBottom: 56, maxWidth: 460 }}>
-            We partner exclusively with the world's foremost architects, designers, and craftspeople — selecting only those whose obsession with perfection matches our own.
+            We partner exclusively with the foremost architects, designers, and craftspeople — selecting only those whose obsession with perfection matches our own.
           </p>
 
           {/* Stats grid */}
@@ -578,7 +579,7 @@ function GroupOfCompaniesSection() {
           </h2>
 
           <p style={{ fontSize: 16, color: "var(--text-secondary)", lineHeight: 1.85, maxWidth: 740 }}>
-            Our Group of Companies spans real estate, luxury, education, interiors, and lifestyle, featuring trusted names like Kalyan Group, Metro Group, SM Life Space, Tanishq, Godrej Interiors, and more—built on trust, innovation, and excellence.
+            Our Group of Companies spans real estate, luxury, education, interiors, Jwelleries and lifestyle, featuring trusted names like Kalyan Group, Metro Group, SM Life Space, Tanishq, Godrej Interiors, and more—built on trust, innovation, and excellence.
           </p>
         </FadeUp>
       </div>
@@ -693,20 +694,7 @@ function ServiceCard({ service: s }: { service: typeof services[0] }) {
       </div>
       <div style={{ fontSize: 17, fontWeight: 700, color: "var(--text-primary)", marginBottom: 12, letterSpacing: "-0.01em" }}>{s.title}</div>
       <p style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.8 }}>{s.desc}</p>
-      <div
-        style={{
-          marginTop: 28,
-          fontSize: 11,
-          color: "#D4AF37",
-          letterSpacing: "0.2em",
-          opacity: hovered ? 1 : 0,
-          transform: hovered ? "translateX(0)" : "translateX(-8px)",
-          transition: "all 0.4s",
-          textTransform: "uppercase",
-        }}
-      >
-        Learn more →
-      </div>
+
     </div>
   )
 }

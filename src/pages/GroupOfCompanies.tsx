@@ -46,7 +46,7 @@ export default function GroupOfCompanies() {
             </h1>
 
             <p style={{ fontSize: 16, color: "var(--text-secondary)", lineHeight: 1.85, maxWidth: 740 }}>
-              Our Group of Companies spans real estate, luxury, education, interiors, and lifestyle, featuring trusted names like Kalyan Group, Metro Group, SM Life Space, Tanishq, Godrej Interiors, and more—built on trust, innovation, and excellence.
+              Our Group of Companies spans real estate, luxury, education, interiors, Jwelleries and lifestyle, featuring trusted names like Kalyan Group, Metro Group, SM Life Space, Tanishq, Godrej Interiors, and more—built on trust, innovation, and excellence.
             </p>
           </FadeUp>
         </div>
